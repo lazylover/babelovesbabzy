@@ -218,6 +218,7 @@ function openAuth(which="signup"){
 }
 accountBtn.onclick=()=>openAuth("signup");
 navAccountBtn.onclick=()=>openAuth("signup");
+window.addEventListener("pageshow",()=>modal.classList.remove("open"));
 $id("authClose").onclick=()=>modal.classList.remove("open");
 modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
 switchBtn.onclick=()=>openAuth(mode==="signup"?"login":"signup");
@@ -263,7 +264,9 @@ onAuthStateChanged(auth, async user=>{
    navAccountBtn.textContent="👤 My Account";
    accountBtn.textContent="👤 My Account";
    status.style.display="block"; statusText.textContent=`Signed in as ${label}`; logout.style.display="inline-block";
-   await setDoc(doc(db,"users",user.uid),{name:user.displayName||"",email:user.email||"",updatedAt:serverTimestamp()},{merge:true});
+   try{ await setDoc(doc(db,"users",user.uid),{name:user.displayName||"",email:user.email||"",updatedAt:serverTimestamp()},{merge:true}); }catch(e){ console.warn("Profile sync skipped:",e); }
+   modal.classList.remove("open");
+   document.body.classList.remove("auth-open");
  }else{
    navAccountBtn.textContent="💕 Sign in";
    accountBtn.textContent="💕 Sign in / Create account";
