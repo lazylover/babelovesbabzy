@@ -25,6 +25,7 @@ header{position:sticky;top:0;z-index:40;background:#070709e8;backdrop-filter:blu
 .gamegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.game{border:1px solid #29262b;background:#101014;border-radius:18px;padding:17px}.tag{display:inline-block;color:#ff8da1;background:#260b13;border:1px solid #4b1927;padding:4px 8px;border-radius:99px;font-size:9px;font-weight:950;letter-spacing:.08em}.game h3{margin:11px 0 6px}.game p{font-size:13px;line-height:1.5;color:var(--muted);min-height:40px}.feature{grid-column:span 6}.feature h3{font-size:23px;margin:8px 0 6px}.pet{text-align:center}.petface{font-size:84px;filter:drop-shadow(0 0 28px #ff174855);animation:float 2.8s ease-in-out infinite}@keyframes float{50%{transform:translateY(-7px)}}.pet-actions{display:flex;justify-content:center;gap:8px;margin-top:10px}.pet-actions button{background:#17151a;border:1px solid #2b272d;color:#fff;border-radius:11px;padding:9px 12px}.letter{border:1px dashed #5a2231;background:linear-gradient(135deg,#1b0c12,#121015);border-radius:18px;padding:19px}.letter p{font-family:Georgia,serif;color:#ffe9ee;font-size:22px;line-height:1.55;margin:0}.canvas{height:280px;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 30% 20%,#5c0a1e,#110d11 66%);border:1px solid #34282d}.canvas canvas{width:100%;height:100%;touch-action:none}.tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.tools button{background:#151318;color:#ddd;border:1px solid #2b272d;border-radius:10px;padding:8px 10px}.timeline{display:grid;gap:8px}.event{border-left:2px solid var(--red);background:#131216;border-radius:0 14px 14px 0;padding:13px}.event small{color:#ff8196}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.timebox{background:#17151a;border:1px solid #2b272d;border-radius:14px;padding:12px;text-align:center}.timebox strong{display:block;font-size:26px}.settings{display:grid;grid-template-columns:1fr 1fr;gap:9px}.settings button{background:#141318;color:#eee;border:1px solid #2b272d;border-radius:13px;padding:12px;text-align:left}.online{color:var(--green)}footer{padding:60px 0 80px;text-align:center;color:#6f696d;font-size:12px}
 .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:#000b}.modal.open{display:flex}
 .account-card{display:grid;gap:14px}.account-profile{display:flex;align-items:center;gap:14px;padding:15px;border:1px solid #2b272d;background:#151419;border-radius:16px}.account-avatar{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#ff315c,#510618);font-size:24px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.account-actions button{width:100%}@media(max-width:600px){.account-actions{grid-template-columns:1fr}}.box{width:min(680px,100%);max-height:90vh;overflow:auto;background:#101014;border:1px solid #3b2b31;border-radius:24px;padding:22px;box-shadow:0 30px 100px #000}.close{float:right;border:0;background:#211d21;color:#ddd;border-radius:10px;width:36px;height:36px}.field{margin:12px 0}.field label{display:block;font-size:11px;color:#bbb;font-weight:900;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;background:#08080a;border:1px solid #302c31;color:#fff;border-radius:12px;padding:11px}.field textarea{min-height:130px}.toast{position:fixed;bottom:20px;left:50%;z-index:120;transform:translate(-50%,25px);opacity:0;background:#f8f5f6;color:#17080d;border-radius:99px;padding:11px 17px;font-weight:900;transition:.25s;box-shadow:0 12px 35px #000}.toast.show{opacity:1;transform:translate(-50%,0)}
+.invite-box{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px;padding:14px;border:1px dashed #6b2638;background:#1b0c12;border-radius:15px}.invite-box strong{font-size:24px;letter-spacing:.2em;color:#fff;text-align:center}.connected-box{display:flex;align-items:center;gap:12px;padding:14px;border:1px solid #28543e;background:#0e1d16;border-radius:15px}.couple-connect-card{box-shadow:inset 0 0 0 1px #2a1b21}.couple-connect-card .account-actions{grid-template-columns:1fr 1fr}@media(max-width:600px){.invite-box{grid-template-columns:1fr}.invite-box button{width:100%}.couple-connect-card .account-actions{grid-template-columns:1fr}}
 @media(max-width:900px){.stat{grid-column:span 6}.main,.side,.feature{grid-column:span 12}.gamegrid{grid-template-columns:1fr 1fr}.navlinks{display:none}}@media(max-width:600px){.stat{grid-column:span 12}.gamegrid{grid-template-columns:1fr}.moods{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:1fr}.countdown{grid-template-columns:repeat(2,1fr)}.hero{padding-top:55px}}
 </style>
 
@@ -93,7 +94,27 @@ header{position:sticky;top:0;z-index:40;background:#070709e8;backdrop-filter:blu
 <h2>Welcome back ❤️</h2>
 <div class="account-card">
 <div class="account-profile"><div class="account-avatar">❤️</div><div><b id="accountName">My Account</b><div class="muted" id="accountEmail"></div></div></div>
-<div class="card" style="padding:16px"><div class="eyebrow">account status</div><h3 style="margin:7px 0 4px">You're signed in ✨</h3><div class="muted">Your babe ❤️ babzy account is active. Couple syncing will appear here once you connect your person.</div></div>
+<div class="card" style="padding:16px"><div class="eyebrow">account status</div><h3 style="margin:7px 0 4px">You're signed in ✨</h3><div class="muted">Your babe ❤️ babzy account is active.</div></div>
+<div class="card couple-connect-card" style="padding:16px">
+  <div class="eyebrow">couple connection</div>
+  <h3 style="margin:7px 0 4px" id="coupleTitle">Connect your person ❤️</h3>
+  <div class="muted" id="coupleSubtitle">Create your couple space and invite your person, or join theirs with a code.</div>
+  <div id="coupleEmpty" style="margin-top:13px">
+    <div class="account-actions" style="margin-bottom:10px"><button class="btn red" id="createCoupleBtn">💑 Create our space</button><button class="btn" id="showJoinBtn">🔗 Join with code</button></div>
+    <div id="joinWrap" style="display:none">
+      <div class="field"><label>6-character invite code</label><input id="joinCode" maxlength="6" autocomplete="off" placeholder="e.g. A7K9Q2" style="text-transform:uppercase;text-align:center;letter-spacing:.18em;font-weight:900"></div>
+      <button class="btn red" style="width:100%" id="joinCoupleBtn">Join our space ❤️</button>
+    </div>
+  </div>
+  <div id="couplePending" style="display:none;margin-top:13px">
+    <div class="invite-box"><span class="muted">Your invite code</span><strong id="inviteCodeText">------</strong><button class="btn" id="copyInviteBtn">Copy code</button></div>
+    <div class="muted" style="margin-top:10px">Send this code to your person. When they join, both accounts will share the same couple space.</div>
+  </div>
+  <div id="coupleConnected" style="display:none;margin-top:13px">
+    <div class="connected-box"><div class="avatar">❤️</div><div><b id="partnerName">Your person</b><div class="muted">Connected to your private couple space ✨</div></div></div>
+  </div>
+  <div class="muted" id="coupleMessage" style="margin-top:10px"></div>
+</div>
 <div class="account-actions"><button class="btn" id="accountSpaceBtn">💕 Go to Our Space</button><button class="btn" id="accountLogoutBtn">Log out</button></div>
 </div>
 </div>
@@ -184,7 +205,7 @@ $("#reset").onclick=()=>{if(confirm("Reset all saved demo data?")){localStorage.
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, deleteDoc, serverTimestamp, runTransaction } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBfW8Yvogi7uGjOFJbIyk59-wP08rBOBYI",
@@ -199,8 +220,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
 const $id = id => document.getElementById(id);
+
 const modal = $id("authModal");
 const accountModal = $id("accountModal");
 const accountBtn = $id("accountBtn");
@@ -219,6 +240,8 @@ const statusText = $id("authStatusText");
 const logout = $id("logoutBtn");
 let mode = "signup";
 let currentUser = null;
+let currentProfile = null;
+let currentCouple = null;
 
 function openAuth(which="signup"){
   mode = which;
@@ -232,12 +255,15 @@ function openAuth(which="signup"){
   modal.classList.add("open");
   setTimeout(()=> (signup ? nameInput : emailInput).focus(), 50);
 }
+
 function openAccount(){
-  if(!currentUser){ openAuth("signup"); return; }
+  if(!currentUser){ openAuth("login"); return; }
   $id("accountName").textContent=currentUser.displayName||"My Account";
   $id("accountEmail").textContent=currentUser.email||"";
   accountModal.classList.add("open");
+  refreshCoupleUI();
 }
+
 accountBtn.onclick=openAccount;
 navAccountBtn.onclick=openAccount;
 $id("accountClose").onclick=()=>accountModal.classList.remove("open");
@@ -261,6 +287,7 @@ function friendly(err){
  };
  return m[err?.code] || err?.message || "Something went wrong. Please try again.";
 }
+
 submit.onclick=async()=>{
  const email=emailInput.value.trim(), password=passInput.value, name=nameInput.value.trim();
  if(!email || !password || (mode==="signup"&&!name)){message.textContent="Please fill in all required fields.";return}
@@ -284,6 +311,168 @@ submit.onclick=async()=>{
 };
 logout.onclick=async()=>{await signOut(auth);toast("Logged out ❤️")};
 
+function randomCode(){
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  let out="";
+  for(let i=0;i<6;i++) out+=chars[Math.floor(Math.random()*chars.length)];
+  return out;
+}
+
+function coupleError(err){
+  const code=err?.code||"";
+  if(code.includes("permission-denied")) return "Firebase blocked this action. Add the Firestore security rules from the file I provided.";
+  return err?.message||"We couldn't update your couple space. Please try again.";
+}
+
+function setCoupleMessage(text,isError=false){
+  const el=$id("coupleMessage");
+  el.textContent=text||"";
+  el.style.color=isError?"#ff8196":"#aaa2a8";
+}
+
+function refreshCoupleUI(){
+  const empty=$id("coupleEmpty"), pending=$id("couplePending"), connected=$id("coupleConnected");
+  empty.style.display="none"; pending.style.display="none"; connected.style.display="none";
+  setCoupleMessage("");
+
+  if(!currentProfile?.coupleId){
+    empty.style.display="block";
+    $id("coupleTitle").textContent="Connect your person ❤️";
+    $id("coupleSubtitle").textContent="Create your couple space and invite your person, or join theirs with a code.";
+    return;
+  }
+
+  if(!currentCouple){
+    pending.style.display="block";
+    $id("coupleTitle").textContent="Your couple space";
+    $id("coupleSubtitle").textContent="Loading your private connection…";
+    return;
+  }
+
+  const isA=currentCouple.partnerA===currentUser.uid;
+  const partnerId=isA?currentCouple.partnerB:currentCouple.partnerA;
+  const partnerName=isA?currentCouple.partnerBName:currentCouple.partnerAName;
+
+  $id("coupleTitle").textContent=partnerId?"You're connected ❤️":"Invite your person ❤️";
+  $id("coupleSubtitle").textContent=partnerId?"This account is linked to your private couple space.":"Your couple space is ready. Send the code below to your person.";
+
+  if(partnerId){
+    connected.style.display="block";
+    $id("partnerName").textContent=partnerName||"Your person";
+  }else{
+    pending.style.display="block";
+    $id("inviteCodeText").textContent=currentCouple.inviteCode||"------";
+  }
+}
+
+async function loadProfileAndCouple(){
+  if(!currentUser){currentProfile=null;currentCouple=null;refreshCoupleUI();return;}
+  try{
+    const profileSnap=await getDoc(doc(db,"users",currentUser.uid));
+    currentProfile=profileSnap.exists()?profileSnap.data():{coupleId:""};
+    currentCouple=null;
+    if(currentProfile.coupleId){
+      const coupleSnap=await getDoc(doc(db,"couples",currentProfile.coupleId));
+      currentCouple=coupleSnap.exists()?coupleSnap.data():null;
+    }
+  }catch(e){
+    console.warn("Couple profile load skipped:",e);
+    setCoupleMessage(coupleError(e),true);
+  }
+  refreshCoupleUI();
+}
+
+$id("createCoupleBtn").onclick=async()=>{
+  if(!currentUser)return;
+  if(currentProfile?.coupleId){setCoupleMessage("You're already connected to a couple space.",true);return;}
+  const btn=$id("createCoupleBtn"); btn.disabled=true; setCoupleMessage("Creating your private space… ❤️");
+  try{
+    let code=randomCode();
+    for(let i=0;i<5;i++){
+      const snap=await getDoc(doc(db,"invites",code));
+      if(!snap.exists())break;
+      code=randomCode();
+    }
+    const coupleId=crypto.randomUUID();
+    const name=currentUser.displayName||"Babe";
+    await setDoc(doc(db,"couples",coupleId),{
+      partnerA:currentUser.uid,
+      partnerB:null,
+      partnerAName:name,
+      partnerBName:"",
+      inviteCode:code,
+      createdAt:serverTimestamp(),
+      updatedAt:serverTimestamp()
+    });
+    await setDoc(doc(db,"invites",code),{coupleId,createdBy:currentUser.uid,createdAt:serverTimestamp()});
+    await setDoc(doc(db,"users",currentUser.uid),{coupleId,updatedAt:serverTimestamp()},{merge:true});
+    currentProfile={...(currentProfile||{}),coupleId};
+    currentCouple={partnerA:currentUser.uid,partnerB:null,partnerAName:name,partnerBName:"",inviteCode:code};
+    refreshCoupleUI();
+    toast("Your couple space is ready ❤️");
+  }catch(e){setCoupleMessage(coupleError(e),true)}
+  finally{btn.disabled=false}
+};
+
+$id("showJoinBtn").onclick=()=>{
+  const wrap=$id("joinWrap");
+  wrap.style.display=wrap.style.display==="none"?"block":"none";
+  if(wrap.style.display==="block") setTimeout(()=> $id("joinCode").focus(),50);
+};
+
+$id("joinCode").addEventListener("input",e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,6));
+$id("joinCoupleBtn").onclick=async()=>{
+  if(!currentUser)return;
+  if(currentProfile?.coupleId){setCoupleMessage("You're already connected to a couple space.",true);return;}
+  const code=$id("joinCode").value.trim().toUpperCase();
+  if(code.length!==6){setCoupleMessage("Enter the 6-character invite code.",true);return;}
+  const btn=$id("joinCoupleBtn"); btn.disabled=true; setCoupleMessage("Connecting you both… ❤️");
+  try{
+    const inviteRef=doc(db,"invites",code);
+    const userRef=doc(db,"users",currentUser.uid);
+    let joinedCouple=null;
+    await runTransaction(db,async tx=>{
+      const inviteSnap=await tx.get(inviteRef);
+      if(!inviteSnap.exists()) throw new Error("That invite code is invalid or has already been used.");
+      const invite=inviteSnap.data();
+      const coupleRef=doc(db,"couples",invite.coupleId);
+      const coupleSnap=await tx.get(coupleRef);
+      if(!coupleSnap.exists()) throw new Error("That couple space no longer exists.");
+      const couple=coupleSnap.data();
+      if(couple.partnerB && couple.partnerB!==currentUser.uid) throw new Error("That couple space already has two people.");
+      if(couple.partnerA===currentUser.uid) throw new Error("You cannot join your own invite code.");
+      if(couple.partnerB===currentUser.uid) return;
+      const name=currentUser.displayName||"Babzy";
+      tx.update(coupleRef,{partnerB:currentUser.uid,partnerBName:name,updatedAt:serverTimestamp()});
+      tx.set(userRef,{coupleId:invite.coupleId,updatedAt:serverTimestamp()},{merge:true});
+      tx.delete(inviteRef);
+      joinedCouple={...couple,partnerB:currentUser.uid,partnerBName:name};
+    });
+    currentProfile={...(currentProfile||{}),coupleId:joinedCouple ? joinedCouple.partnerA===currentUser.uid?currentProfile.coupleId:undefined : currentProfile.coupleId};
+    const inviteSnap=await getDoc(doc(db,"invites",code));
+    // The invite is deleted after a successful transaction; recover couple id from the joined data if available.
+    if(joinedCouple){
+      // Find the couple id from the transaction input by reusing the code's target before deletion.
+      // The temporary field below is set from the invite during the transaction in normal execution.
+    }
+    // Reload the user's profile to get the authoritative coupleId.
+    const fresh=await getDoc(userRef);
+    currentProfile=fresh.exists()?fresh.data():currentProfile;
+    if(currentProfile?.coupleId){
+      const c=await getDoc(doc(db,"couples",currentProfile.coupleId));
+      currentCouple=c.exists()?c.data():null;
+    }
+    refreshCoupleUI();
+    toast("You're connected ❤️");
+  }catch(e){setCoupleMessage(coupleError(e),true)}
+  finally{btn.disabled=false}
+};
+
+$id("copyInviteBtn").onclick=async()=>{
+  const code=$id("inviteCodeText").textContent;
+  try{await navigator.clipboard.writeText(code);toast("Invite code copied 💕")}catch{setCoupleMessage("Your code is "+code)}
+};
+
 onAuthStateChanged(auth, async user=>{
  currentUser=user||null;
  if(user){
@@ -291,13 +480,14 @@ onAuthStateChanged(auth, async user=>{
    navAccountBtn.textContent="👤 My Account";
    accountBtn.textContent="👤 My Account";
    status.style.display="block"; statusText.textContent=`Signed in as ${label}`; logout.style.display="inline-block";
-   try{ await setDoc(doc(db,"users",user.uid),{name:user.displayName||"",email:user.email||"",updatedAt:serverTimestamp()},{merge:true}); }catch(e){ console.warn("Profile sync skipped:",e); }
+   try{await setDoc(doc(db,"users",user.uid),{name:user.displayName||"",email:user.email||"",updatedAt:serverTimestamp()},{merge:true});}catch(e){console.warn("Profile sync skipped:",e)}
    modal.classList.remove("open");
-   document.body.classList.remove("auth-open");
+   await loadProfileAndCouple();
  }else{
    navAccountBtn.textContent="💕 Sign in";
    accountBtn.textContent="💕 Sign in / Create account";
    status.style.display="block"; statusText.textContent="Not signed in"; logout.style.display="none";
+   currentProfile=null; currentCouple=null;
  }
 });
 </script>
