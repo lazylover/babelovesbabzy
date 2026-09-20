@@ -23,7 +23,8 @@ header{position:sticky;top:0;z-index:40;background:#070709e8;backdrop-filter:blu
 .btn{border:1px solid var(--line);background:#151419;color:#fff;border-radius:13px;padding:12px 17px;font-weight:900;transition:.18s transform,.18s filter}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.red{background:linear-gradient(135deg,#ff1748,#b8002d);border-color:#ff345c;box-shadow:0 12px 35px #ff174833}.btn.green{background:#10261b;border-color:#275b40;color:#8cf2bd}
 .section{padding:30px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:16px}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#ff7189;font-weight:950}.section h2{font-family:"Playfair Display",serif;font-weight:600;font-size:31px;letter-spacing:-.05em;margin:5px 0}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{background:linear-gradient(180deg,#121216,#0d0d10);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 18px 60px #0008}.stat{grid-column:span 3;min-height:125px}.stat .num{font-size:33px;font-weight:950;letter-spacing:-.05em;margin:6px 0}.muted{font-size:13px;color:var(--muted)}.main{grid-column:span 8}.side{grid-column:span 4}.moods{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mood{border:1px solid #2a272d;background:#151419;color:#ddd;border-radius:15px;padding:13px 8px}.mood span{display:block;font-size:24px;margin-bottom:5px}.mood.active{border-color:#ff315a;background:#260b13;box-shadow:0 0 24px #ff174522}.note{background:#17151a;border:1px solid #2b272d;border-radius:16px;padding:14px;margin-top:12px}.row{display:flex;align-items:center;gap:10px}.avatar{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#ff315c,#510618)}.bar{height:9px;background:#27242a;border-radius:99px;overflow:hidden;margin:12px 0}.bar i{display:block;width:76%;height:100%;border-radius:99px;background:linear-gradient(90deg,#ff1748,#ff8097)}.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.quick button{border:1px solid #2a272d;background:#141318;color:#eee;border-radius:14px;padding:13px;text-align:left}.quick button:hover{border-color:#662738;background:#1d1015}.quick b{display:block;font-size:19px;margin-bottom:5px}
 .gamegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.game{border:1px solid #29262b;background:#101014;border-radius:18px;padding:17px}.tag{display:inline-block;color:#ff8da1;background:#260b13;border:1px solid #4b1927;padding:4px 8px;border-radius:99px;font-size:9px;font-weight:950;letter-spacing:.08em}.game h3{margin:11px 0 6px}.game p{font-size:13px;line-height:1.5;color:var(--muted);min-height:40px}.feature{grid-column:span 6}.feature h3{font-size:23px;margin:8px 0 6px}.pet{text-align:center}.petface{font-size:84px;filter:drop-shadow(0 0 28px #ff174855);animation:float 2.8s ease-in-out infinite}@keyframes float{50%{transform:translateY(-7px)}}.pet-actions{display:flex;justify-content:center;gap:8px;margin-top:10px}.pet-actions button{background:#17151a;border:1px solid #2b272d;color:#fff;border-radius:11px;padding:9px 12px}.letter{border:1px dashed #5a2231;background:linear-gradient(135deg,#1b0c12,#121015);border-radius:18px;padding:19px}.letter p{font-family:Georgia,serif;color:#ffe9ee;font-size:22px;line-height:1.55;margin:0}.canvas{height:280px;border-radius:18px;overflow:hidden;background:radial-gradient(circle at 30% 20%,#5c0a1e,#110d11 66%);border:1px solid #34282d}.canvas canvas{width:100%;height:100%;touch-action:none}.tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.tools button{background:#151318;color:#ddd;border:1px solid #2b272d;border-radius:10px;padding:8px 10px}.timeline{display:grid;gap:8px}.event{border-left:2px solid var(--red);background:#131216;border-radius:0 14px 14px 0;padding:13px}.event small{color:#ff8196}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.timebox{background:#17151a;border:1px solid #2b272d;border-radius:14px;padding:12px;text-align:center}.timebox strong{display:block;font-size:26px}.settings{display:grid;grid-template-columns:1fr 1fr;gap:9px}.settings button{background:#141318;color:#eee;border:1px solid #2b272d;border-radius:13px;padding:12px;text-align:left}.online{color:var(--green)}footer{padding:60px 0 80px;text-align:center;color:#6f696d;font-size:12px}
-.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:#000b}.modal.open{display:flex}.box{width:min(680px,100%);max-height:90vh;overflow:auto;background:#101014;border:1px solid #3b2b31;border-radius:24px;padding:22px;box-shadow:0 30px 100px #000}.close{float:right;border:0;background:#211d21;color:#ddd;border-radius:10px;width:36px;height:36px}.field{margin:12px 0}.field label{display:block;font-size:11px;color:#bbb;font-weight:900;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;background:#08080a;border:1px solid #302c31;color:#fff;border-radius:12px;padding:11px}.field textarea{min-height:130px}.toast{position:fixed;bottom:20px;left:50%;z-index:120;transform:translate(-50%,25px);opacity:0;background:#f8f5f6;color:#17080d;border-radius:99px;padding:11px 17px;font-weight:900;transition:.25s;box-shadow:0 12px 35px #000}.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px;background:#000b}.modal.open{display:flex}
+.account-card{display:grid;gap:14px}.account-profile{display:flex;align-items:center;gap:14px;padding:15px;border:1px solid #2b272d;background:#151419;border-radius:16px}.account-avatar{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#ff315c,#510618);font-size:24px}.account-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.account-actions button{width:100%}@media(max-width:600px){.account-actions{grid-template-columns:1fr}}.box{width:min(680px,100%);max-height:90vh;overflow:auto;background:#101014;border:1px solid #3b2b31;border-radius:24px;padding:22px;box-shadow:0 30px 100px #000}.close{float:right;border:0;background:#211d21;color:#ddd;border-radius:10px;width:36px;height:36px}.field{margin:12px 0}.field label{display:block;font-size:11px;color:#bbb;font-weight:900;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;background:#08080a;border:1px solid #302c31;color:#fff;border-radius:12px;padding:11px}.field textarea{min-height:130px}.toast{position:fixed;bottom:20px;left:50%;z-index:120;transform:translate(-50%,25px);opacity:0;background:#f8f5f6;color:#17080d;border-radius:99px;padding:11px 17px;font-weight:900;transition:.25s;box-shadow:0 12px 35px #000}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:900px){.stat{grid-column:span 6}.main,.side,.feature{grid-column:span 12}.gamegrid{grid-template-columns:1fr 1fr}.navlinks{display:none}}@media(max-width:600px){.stat{grid-column:span 12}.gamegrid{grid-template-columns:1fr}.moods{grid-template-columns:repeat(2,1fr)}.quick{grid-template-columns:1fr}.countdown{grid-template-columns:repeat(2,1fr)}.hero{padding-top:55px}}
 </style>
 
@@ -83,6 +84,19 @@ header{position:sticky;top:0;z-index:40;background:#070709e8;backdrop-filter:blu
 <div id="authStatus" style="position:fixed;right:14px;bottom:14px;z-index:90;background:#151419;border:1px solid #3b2b31;color:#ddd;border-radius:14px;padding:8px 11px;font-size:11px;display:none">
 <span id="authStatusText">Not signed in</span>
 <button id="logoutBtn" class="btn" style="margin-left:7px;padding:6px 9px;display:none">Log out</button>
+</div>
+
+<div class="modal" id="accountModal">
+<div class="box">
+<button class="close" id="accountClose">×</button>
+<div class="eyebrow">your account</div>
+<h2>Welcome back ❤️</h2>
+<div class="account-card">
+<div class="account-profile"><div class="account-avatar">❤️</div><div><b id="accountName">My Account</b><div class="muted" id="accountEmail"></div></div></div>
+<div class="card" style="padding:16px"><div class="eyebrow">account status</div><h3 style="margin:7px 0 4px">You're signed in ✨</h3><div class="muted">Your babe ❤️ babzy account is active. Couple syncing will appear here once you connect your person.</div></div>
+<div class="account-actions"><button class="btn" id="accountSpaceBtn">💕 Go to Our Space</button><button class="btn" id="accountLogoutBtn">Log out</button></div>
+</div>
+</div>
 </div>
 
 <div class="modal" id="authModal">
@@ -188,6 +202,7 @@ const db = getFirestore(app);
 
 const $id = id => document.getElementById(id);
 const modal = $id("authModal");
+const accountModal = $id("accountModal");
 const accountBtn = $id("accountBtn");
 const navAccountBtn = $id("navAccountBtn");
 const title = $id("authTitle");
@@ -203,6 +218,7 @@ const status = $id("authStatus");
 const statusText = $id("authStatusText");
 const logout = $id("logoutBtn");
 let mode = "signup";
+let currentUser = null;
 
 function openAuth(which="signup"){
   mode = which;
@@ -216,9 +232,19 @@ function openAuth(which="signup"){
   modal.classList.add("open");
   setTimeout(()=> (signup ? nameInput : emailInput).focus(), 50);
 }
-accountBtn.onclick=()=>openAuth("signup");
-navAccountBtn.onclick=()=>openAuth("signup");
-window.addEventListener("pageshow",()=>modal.classList.remove("open"));
+function openAccount(){
+  if(!currentUser){ openAuth("signup"); return; }
+  $id("accountName").textContent=currentUser.displayName||"My Account";
+  $id("accountEmail").textContent=currentUser.email||"";
+  accountModal.classList.add("open");
+}
+accountBtn.onclick=openAccount;
+navAccountBtn.onclick=openAccount;
+$id("accountClose").onclick=()=>accountModal.classList.remove("open");
+accountModal.onclick=e=>{if(e.target===accountModal)accountModal.classList.remove("open")};
+$id("accountSpaceBtn").onclick=()=>{accountModal.classList.remove("open");$("#settings")?.scrollIntoView({behavior:"smooth"})};
+$id("accountLogoutBtn").onclick=async()=>{accountModal.classList.remove("open");await signOut(auth);toast("Logged out ❤️")};
+window.addEventListener("pageshow",()=>{modal.classList.remove("open");accountModal.classList.remove("open")});
 $id("authClose").onclick=()=>modal.classList.remove("open");
 modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
 switchBtn.onclick=()=>openAuth(mode==="signup"?"login":"signup");
@@ -259,6 +285,7 @@ submit.onclick=async()=>{
 logout.onclick=async()=>{await signOut(auth);toast("Logged out ❤️")};
 
 onAuthStateChanged(auth, async user=>{
+ currentUser=user||null;
  if(user){
    const label=user.displayName||user.email||"My Account";
    navAccountBtn.textContent="👤 My Account";
